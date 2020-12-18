@@ -17,9 +17,11 @@ public class Customer {
     @Nationalized
     private String legalName;
     private String dateOfBirth;
+    private int age;
     private int ssn;
     private String phoneNumber;
     private String emailAddress;
+    private Double annualIncome;
     @OneToMany
     private List<Account> accountList;
 
@@ -78,4 +80,28 @@ public class Customer {
     public void setAccountList(List<Account> accountList) {
         this.accountList = accountList;
     }
+
+    public Double getAnnualIncome() {
+        return annualIncome;
+    }
+
+    public void setAnnualIncome(Double annualIncome) {
+        this.annualIncome = annualIncome;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String[] getCustomerInfo() {
+        String[] outputs = {"Name: " + legalName, "Date of Birth: " + dateOfBirth, "Phone: " + phoneNumber, "Email: " + emailAddress, "Annual Income: " + annualIncome};
+        return outputs;
+    }
+
+
+
 }

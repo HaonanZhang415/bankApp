@@ -5,8 +5,10 @@ public class CustomerDTO {
     private String legalName;
     private String dateOfBirth;
     private int ssn;
+    private int age;
     private String phoneNumber;
     private String emailAddress;
+    private Double annualIncome;
 
     public String getLegalName() {
         return legalName;
@@ -46,5 +48,21 @@ public class CustomerDTO {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    public Double getAnnualIncome() {
+        return annualIncome;
+    }
+
+    public void setAnnualIncome(Double annualIncome) {
+        this.annualIncome = annualIncome;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
